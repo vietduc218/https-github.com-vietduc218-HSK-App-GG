@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 240 4% 6%;
+    --foreground: 0 0% 90%;
+    --card: 240 4% 8%;
+    --card-foreground: 0 0% 90%;
+    --popover: 240 4% 6%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 38 36% 56%;
+    --primary-foreground: 240 4% 6%;
+    --secondary: 240 4% 12%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 4% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 38 36% 56%;
+    --accent-foreground: 240 4% 6%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 15%;
+    --input: 240 4% 15%;
+    --ring: 38 36% 56%;
+    --radius: 1.5rem;
+    --sidebar-background: 240 4% 5%;
+    --sidebar-foreground: 0 0% 70%;
+    --sidebar-primary: 38 36% 56%;
+    --sidebar-primary-foreground: 240 4% 6%;
+    --sidebar-accent: 240 4% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 4% 12%;
+    --sidebar-ring: 38 36% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans selection:bg-primary/20 selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair italic;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-[rgba(30,30,32,0.6)] border border-white/5 backdrop-blur-[10px];
+  }
+  .serif {
+    @apply font-playfair;
+  }
+  .accent-text {
+    @apply text-[#B89A67];
+  }
+}
